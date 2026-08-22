@@ -1,0 +1,15 @@
+{
+  "header": {
+    "kind": "codex_agent_internal_release",
+    "schema_version": "1.0",
+    "channel": "internal"
+  },
+  "detail": {
+    "version": "0.1.16",
+    "artifact_name": "CodexRemoteAgent.msi",
+    "artifact_sha256": "cd312a6fe5abcc582e6a918369a31040abf67c0cb15b2b93a8f1089f4fe7fcf6",
+    "download_url": "https://github.com/1nuo123/codex-remote-agent-releases/releases/download/v0.1.16/CodexRemoteAgent.msi",
+    "automatic_updates_enabled": false,
+    "published_at": "2026-08-22T08:56:03.498161Z"
+  }
+}
