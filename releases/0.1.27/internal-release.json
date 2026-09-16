@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kind": "codex_agent_internal_release",
+    "schema_version": "1.0",
+    "channel": "internal"
+  },
+  "detail": {
+    "version": "0.1.27",
+    "artifact_name": "CodexRemoteAgent.msi",
+    "artifact_sha256": "211860b09a44928427b2cd2ac9253890eb4a045df74c038803eff667a0ac3daa",
+    "download_url": "https://github.com/1nuo123/codex-remote-agent-releases/releases/download/v0.1.27/CodexRemoteAgent.msi",
+    "automatic_updates_enabled": false,
+    "published_at": "2026-09-16T02:58:36.553936Z",
+    "source_repository": "1nuo123/python-web-fastapi",
+    "source_revision": "37338dbbc959d09024fa8faf228d68992f7b6abc",
+    "source_dirty": false
+  }
+}
