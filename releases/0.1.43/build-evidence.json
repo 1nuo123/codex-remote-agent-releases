@@ -1,0 +1,76 @@
+{
+  "version": "0.1.43",
+  "built_and_verified_at": "2026-10-25T00:39:24.289544+00:00",
+  "distribution_mode": "internal",
+  "authenticode_status": "NotSigned",
+  "automatic_updates_enabled": false,
+  "public_origin": "https://nuotop.xyz",
+  "source_revision": "14dd31d29d093e4ef62093d11d0d55152fd23547",
+  "source_dirty": true,
+  "source_hashes_file": "source-files.sha256.json",
+  "agent_implementation_digest": "07abb89f27198686fd0d459dca81554d4104b34059df87e804973292b6777a2a",
+  "matches_12_hour_soak_agent_implementation": true,
+  "msi_sha256": "72aacf1a08564c8dd7d518e9c7088287f8023233cb5beb068ff533877c2a5cdd",
+  "msi_length_bytes": 33280000,
+  "extracted_executable_sha256": "49a1f25a127d65c04e19ab41ce3af72b055394ddbdff2c80ed9467078fb32af8",
+  "msi_payload_verification": {
+    "passed": true,
+    "matched_files": 5,
+    "product_version": "0.1.43",
+    "scope": "perUser",
+    "production_bootstrap_verified": true,
+    "method": "WiX decompile/export; byte comparison with actual build payload; no installation"
+  },
+  "extracted_binary_e2e": {
+    "environment": "Windows; real TLS/WSS; product ASGI routes; SQLite/local bus; real Codex 0.145.0",
+    "scenarios": [
+      {
+        "name": "packaged EXE recovers 520/522 and reaches server command-ready",
+        "passed": true,
+        "agent_pid": 208892
+      },
+      {
+        "name": "packaged EXE retries consumed ticket with fresh credentials",
+        "passed": true
+      },
+      {
+        "name": "packaged doctor uses configured CA and does not issue device credentials",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "name": "packaged duplicate run rejected by existing singleton lock",
+        "passed": true
+      },
+      {
+        "name": "actual Agent crash kills owned process tree; stale online projection invalidated",
+        "passed": true,
+        "owned_process_count": 7
+      }
+    ],
+    "executable_sha256": "49a1f25a127d65c04e19ab41ce3af72b055394ddbdff2c80ed9467078fb32af8",
+    "ticket_reuse": 0,
+    "process_exit_code": 15,
+    "passed": true,
+    "completed_at": "2026-10-25T00:38:31.554592+00:00"
+  },
+  "existing_source_soak": {
+    "requested_seconds": 43200,
+    "started_at": "2026-10-24T11:40:35.805692+00:00",
+    "completed_at": "2026-10-24T23:40:37.990653+00:00",
+    "passed": true,
+    "source_unchanged": true,
+    "implementation_digest": "07abb89f27198686fd0d459dca81554d4104b34059df87e804973292b6777a2a"
+  },
+  "limits": [
+    "This MSI was not installed or upgraded over an existing user installation.",
+    "Not an Authenticode signed release.",
+    "Production PostgreSQL/Redis/RabbitMQ combination and full browser-to-Agent acceptance remain separate gates.",
+    "Built before the user commits; parent revision and dirty source hashes describe provenance."
+  ],
+  "publishing": {
+    "performed": false,
+    "owner": "user manual GitHub Release"
+  },
+  "commands_syntax_checked": true
+}
