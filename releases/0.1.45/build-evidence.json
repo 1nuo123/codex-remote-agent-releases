@@ -1,0 +1,111 @@
+{
+  "version": "0.1.45",
+  "built_at": "2026-10-25T05:43:36.246548+00:00",
+  "distribution_mode": "internal",
+  "automatic_updates_enabled": false,
+  "public_origin": "https://nuotop.xyz",
+  "source_revision": "8e2708493e3e2d45265064c4524cd9c7219ea27d",
+  "source_dirty": true,
+  "source_hashes_file": "source-files.sha256.json",
+  "source_hashes_sha256": "5a495128b00098c7a1a4e6ff81d09bd2667cc466dfd220a209c379c755a2d021",
+  "msi_sha256": "df47e164a2ac187b366d6e523205be202ef466dbb05a84bd0707075ba64c7c09",
+  "msi_length_bytes": 33284096,
+  "executable_sha256": "6bb6455c0ab147e1e70ea4cb07bb1e88fe0c634860850f230354f69dfafbdf50",
+  "payload_sha256": {
+    "agent-bootstrap.toml": "2c267710525939d0666d43ab4e1675c9bb9c064b6ce4bcb56609e31f1d0ab11f",
+    "codex-remote-agent.exe": "6bb6455c0ab147e1e70ea4cb07bb1e88fe0c634860850f230354f69dfafbdf50",
+    "purge_agent_state.ps1": "b752f2b75fb0d0e3fc882d52b7aeb21e54415684b60a0516632eaa5dd35320c1",
+    "register_task_scheduler.ps1": "313d66d69936acfb9f8f90a08cbcdc08ef9f6a1a70c2cec2a58bc9d6014d4ff2",
+    "unregister_task_scheduler.ps1": "938892805de7e44cf6c2372bad36ed705d44f18b15101d72c316f16b2abf1b52"
+  },
+  "extracted_binary_e2e": {
+    "environment": "Windows; real TLS/WSS; product ASGI routes; SQLite/local bus; real Codex 0.145.0",
+    "scenarios": [
+      {
+        "name": "connected inactive host has no command admission; real activation API grants ownership",
+        "passed": true
+      },
+      {
+        "name": "hello timeout closes with 1013 and retries fresh ticket",
+        "passed": true,
+        "closed": [
+          {
+            "code": 1012,
+            "reason": "acceptance_reconnect"
+          },
+          {
+            "code": 1013,
+            "reason": "hello_timeout"
+          }
+        ]
+      },
+      {
+        "name": "packaged EXE recovers 520/522 and reaches server command-ready",
+        "passed": true,
+        "agent_pid": 193700
+      },
+      {
+        "name": "packaged EXE retries consumed ticket with fresh credentials",
+        "passed": true
+      },
+      {
+        "name": "packaged EXE six-second hello retains original Codex processes",
+        "passed": true,
+        "codex_pids": [
+          176340
+        ]
+      },
+      {
+        "name": "packaged EXE total setup deadline retains original Codex processes",
+        "passed": true,
+        "codex_pids": [
+          176340
+        ]
+      },
+      {
+        "name": "packaged doctor uses configured CA and does not issue device credentials",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "name": "packaged duplicate run rejected by existing singleton lock",
+        "passed": true
+      },
+      {
+        "name": "actual Agent crash kills owned process tree; stale online projection invalidated",
+        "passed": true,
+        "owned_process_count": 7
+      }
+    ],
+    "acceptance_runner_sha256": "72e2e945337e492c9c019d38c92449749505c215181352a938cb67162212bbc9",
+    "executable_sha256": "6bb6455c0ab147e1e70ea4cb07bb1e88fe0c634860850f230354f69dfafbdf50",
+    "ticket_reuse": 0,
+    "process_exit_code": 15,
+    "passed": true,
+    "completed_at": "2026-10-25T05:47:45.375365+00:00"
+  },
+  "soak": {
+    "status": "not_run",
+    "previous_release_evidence_reused": false
+  },
+  "limits": [
+    "No installation over the user's existing Agent",
+    "No deployed public network verification",
+    "Unsigned internal release"
+  ],
+  "publishing": {
+    "performed": false,
+    "owner": "user"
+  },
+  "msi_payload_verification": {
+    "passed": true,
+    "matched_files": [
+      "agent-bootstrap.toml",
+      "codex-remote-agent.exe",
+      "purge_agent_state.ps1",
+      "register_task_scheduler.ps1",
+      "unregister_task_scheduler.ps1"
+    ]
+  },
+  "verified_at": "2026-10-25T05:48:36.302436+00:00"
+}
