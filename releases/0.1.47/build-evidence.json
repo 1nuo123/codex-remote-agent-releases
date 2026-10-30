@@ -1,0 +1,79 @@
+{
+  "version": "0.1.47",
+  "built_at": "2026-10-30T13:42:09.008115+00:00",
+  "distribution_mode": "internal",
+  "automatic_updates_enabled": false,
+  "public_origin": "https://nuotop.xyz",
+  "source_revision": "00aa4d6feb291614238c1cd4b97d8c67b30393e0",
+  "source_dirty": true,
+  "source_hashes_file": "source-files.sha256.json",
+  "source_hashes_sha256": "1ae834226624f5dd56b5b3ab7e1ed912ee46c88799926edc57b1d974941c9dcb",
+  "msi_sha256": "cc0bb71ab0a49c617458ea9893f9c05c1fec7281c5859615abb029b503cbefda",
+  "msi_length_bytes": 33325056,
+  "executable_sha256": "bd79491c5bd59b8ea210609f5e39f5c7e57e923896ae1ab8404056c02405a2a1",
+  "payload_sha256": {
+    "agent-bootstrap.toml": "0e487e5f715123c6bcb3bdf58227daf6e91c24765dd3b296423e3eaf324a1ac0",
+    "codex-remote-agent.exe": "bd79491c5bd59b8ea210609f5e39f5c7e57e923896ae1ab8404056c02405a2a1",
+    "purge_agent_state.ps1": "b752f2b75fb0d0e3fc882d52b7aeb21e54415684b60a0516632eaa5dd35320c1",
+    "register_task_scheduler.ps1": "313d66d69936acfb9f8f90a08cbcdc08ef9f6a1a70c2cec2a58bc9d6014d4ff2",
+    "unregister_task_scheduler.ps1": "938892805de7e44cf6c2372bad36ed705d44f18b15101d72c316f16b2abf1b52"
+  },
+  "extracted_binary_e2e": {
+    "environment": "Windows; real TLS/WSS; product ASGI routes; SQLite/local bus; real Codex 0.145.0",
+    "scenarios": [
+      {
+        "name": "packaged EXE recovers 520/522 and reaches server command-ready",
+        "passed": true,
+        "agent_pid": 10860
+      },
+      {
+        "name": "packaged EXE retries consumed ticket with fresh credentials",
+        "passed": true
+      },
+      {
+        "name": "packaged doctor uses configured CA and does not issue device credentials",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "name": "packaged duplicate run rejected by existing singleton lock",
+        "passed": true
+      },
+      {
+        "name": "actual Agent crash kills owned process tree; stale online projection invalidated",
+        "passed": true,
+        "owned_process_count": 3
+      }
+    ],
+    "acceptance_runner_sha256": "eb4e498b0a0d6c77c7870ff885594fb300a6630260253a413b069f3a1f3e4a07",
+    "executable_sha256": "bd79491c5bd59b8ea210609f5e39f5c7e57e923896ae1ab8404056c02405a2a1",
+    "ticket_reuse": 0,
+    "process_exit_code": 15,
+    "passed": true,
+    "completed_at": "2026-10-30T13:50:27.286817+00:00"
+  },
+  "soak": {
+    "status": "not_run",
+    "previous_release_evidence_reused": false
+  },
+  "limits": [
+    "No installation over the user's existing Agent",
+    "No deployed public network verification",
+    "Unsigned internal release"
+  ],
+  "publishing": {
+    "performed": false,
+    "owner": "user"
+  },
+  "msi_payload_verification": {
+    "passed": true,
+    "matched_files": [
+      "agent-bootstrap.toml",
+      "codex-remote-agent.exe",
+      "purge_agent_state.ps1",
+      "register_task_scheduler.ps1",
+      "unregister_task_scheduler.ps1"
+    ]
+  },
+  "verified_at": "2026-10-30T13:51:07.612183+00:00"
+}
